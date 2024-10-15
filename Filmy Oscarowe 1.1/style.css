@@ -125,9 +125,13 @@ img {
 
 #zegarek{
     background-color: #00000065;
+    font-family: Verdana, sans-serif;
     color:#ffffff;
+    font-size: 25px;
 }
+
 #data{
     background-color: #00000065;
+    font-family: Verdana, sans-serif;
     color:#ffffff;
 }
