@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="0.html">Strona główna</a></li>
+            <li><a href="1.html">Lot nad kukułczym gniazdem</a></li>
+            <li><a href="2.html">Milczenie owiec</a></li>
+            <li><a href="3.html">Forrest Gump</a></li>
+            <li><a href="4.html">Gladiator</a></li>
+            <li><a href="5.html">Oppenheimer</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Skontaktuj się z nami</h2>
+        <form action="mailto:oscar@example.com" method="POST" enctype="text/plain" class="formularz">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit" value="Wyślij" id="wyslij" style="width: 100px;">
+        </form>
+    </div>
+        
+    <script>
+        $("#wyslij").on("click", function(){
+             $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontsize: "3em",
+                borderwidth: "10px"
+             }, 1500);
+});
+    </script>
+
+<center>
+<div id="animacjaTestowa3" class="test-block"> 
+Klikaj, abym urósł
+</div>
+</center>
+
+<script>
+$("#animacjaTestowa3").on("click", function(){
+if (!$(this).is(":animated")) {
+    $(this).animate({
+        width: "+=" + 50,
+        height: "+=" + 10,
+        opacity: "-=" + 0.1,
+        duration : 3000 
+    });
+}
+});
+</script>
+
+</body>
+</html>
