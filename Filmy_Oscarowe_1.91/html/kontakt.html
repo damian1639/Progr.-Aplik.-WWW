@@ -1,0 +1,48 @@
+<div class="container">
+    <!-- Sekcja kontaktowa -->
+    <h2>Skontaktuj się z nami</h2>
+    <form action="mailto:oscar@example.com" method="POST" enctype="text/plain" class="formularz">
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" required> 
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Wyślij" id="wyslij" style="width: 100px;">
+    </form>
+</div>
+
+<script>
+    // Animacja przycisku "Wyślij"
+    $("#wyslij").on("click", function() {
+        $(this).animate({
+            width: "500px",
+            opacity: 0.4, 
+            fontSize: "3em",
+            borderWidth: "10px" 
+        }, 1500);
+    });
+</script>
+
+<center>
+    <!-- Animacja -->
+    <div id="animacjaTestowa3" class="test-block">
+        Klikaj, abym urósł
+    </div>
+</center>
+
+<script>
+    // Animacja powiększania przycisku po kliknięciu
+    $("#animacjaTestowa3").on("click", function() {
+        if (!$(this).is(":animated")) { 
+            $(this).animate({
+                width: "+=50", 
+                height: "+=10", 
+                opacity: "-=0.1" 
+            }, 3000);
+        }
+    });
+</script>
