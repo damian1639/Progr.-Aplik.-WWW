@@ -1,0 +1,101 @@
+<script>
+    // Animacja nawigacji
+    $("nav ul li a").on({
+        "mouseover": function() {
+            $(this).animate({ 
+                fontSize: "1.5em"
+            }, 300); 
+        },
+        "mouseout": function() {
+            $(this).animate({
+                fontSize: "1em"
+            }, 300);
+        }
+    });
+</script>
+
+<div class="container">
+    <!-- Sekcja powitalna -->
+    <h2>Witaj na stronie poświęconej Oscarowym filmom!</h2>
+    <p>
+        Znajdziesz tu informacje o filmach nagrodzonych prestiżowymi nagrodami Oscara. 
+        Każdy z filmów, który tutaj prezentuje, zyskał uznanie krytyków i widzów na całym świecie.
+    </p>
+
+    <!-- Tabela z filmami -->
+    <table class="tabela">
+        <tr>
+            <!-- Nagłówki tabeli -->
+            <td class="tytul">Film</td>
+            <td class="tytul">Rok</td>
+            <td class="tytul">Nagrody</td>
+        </tr>
+        <!-- Wiersze z danymi o filmach -->
+        <tr>
+            <td><a href="index.php?idp=lot_nad_kukulczym_gniazdem">Lot nad kukułczym gniazdem</a></td>
+            <td>1975</td>
+            <td>5 Oscarów</td>
+        </tr>
+        <tr>
+            <td><a href="index.php?idp=milczenie_owiec">Milczenie owiec</a></td>
+            <td>1991</td>
+            <td>5 Oscarów</td>
+        </tr>
+        <tr>
+            <td><a href="index.php?idp=forrest_gump">Forrest Gump</a></td>
+            <td>1994</td>
+            <td>6 Oscarów</td>
+        </tr>
+        <tr>
+            <td><a href="index.php?idp=gladiator">Gladiator</a></td>
+            <td>2000</td>
+            <td>5 Oscarów</td>
+        </tr>
+        <tr>
+            <td><a href="index.php?idp=oppenheimer">Oppenheimer</a></td>
+            <td>2023</td>
+            <td>7 Oscarów</td>
+        </tr>
+    </table>
+
+    <!-- Galeria zdjęć -->
+    <h2>Zdjęcia aktorów pierwszoplanowych z gal Oscarowych</h2>
+    <div class="galeria">
+        <!-- Zdjęcia w oddzielnych kontenerach -->
+        <div class="image-container">
+            <img src="img/jack.webp" alt="Jack Nicholson">
+            <p class="image-description">Jack Nicholson</p>
+        </div>
+        <div class="image-container">
+            <img src="img/anthony.jpg" alt="Anthony Hopkins">
+            <p class="image-description">Anthony Hopkins</p>
+        </div>
+        <div class="image-container">
+            <img src="img/tom.webp" alt="Tom Hanks">
+            <p class="image-description">Tom Hanks</p>
+        </div>
+        <div class="image-container">
+            <img src="img/russel.webp" alt="Russel Crowe">
+            <p class="image-description">Russel Crowe</p>
+        </div>
+        <div class="image-container">
+            <img src="img/cillian.jfif" alt="Cillian Murphy">
+            <p class="image-description">Cillian Murphy</p>
+        </div>
+    </div>
+</div>
+
+<!-- Zmiana koloru tła -->
+<center>
+    <form method="POST" name="background">
+        <!-- Przycisk do zmiany tła -->
+        <input type="button" value="żółty" onclick="changeBackground('#FFF000')">
+        <input type="button" value="czarny" onclick="changeBackground('#000000')">
+        <input type="button" value="biały" onclick="changeBackground('#FFFFFF')">
+        <input type="button" value="zielony" onclick="changeBackground('#00FF00')">
+        <input type="button" value="niebieski" onclick="changeBackground('#0000FF')">
+        <input type="button" value="pomarańczowy" onclick="changeBackground('#FF8000')">
+        <input type="button" value="szary" onclick="changeBackground('#C0C0C0')">
+        <input type="button" value="czerwony" onclick="changeBackground('#FF0000')">
+    </form>
+</center>
